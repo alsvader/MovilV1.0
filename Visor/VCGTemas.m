@@ -9,6 +9,7 @@
 #import "VCGTemas.h"
 #import "BDManager.h"
 #import "VCGPastel.h"
+#import "VCGBarras.h"
 
 @interface VCGTemas ()
     @property (nonatomic, strong) NSArray *arrDatos;
@@ -91,7 +92,7 @@
     {
         case 1: {
             UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            VCGPastel *pViewController =[storyBoard instantiateViewControllerWithIdentifier:@"VCGPastel"];
+            VCGBarras *pViewController =[storyBoard instantiateViewControllerWithIdentifier:@"VCGBarras"];
             [self.navigationController pushViewController:pViewController animated:YES];
             
             NSString *temaSel = self.arrDatos[indexPath.row];
@@ -100,6 +101,16 @@
             break;
         }
 
+        case 2: {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            VCGPastel *pViewController =[storyBoard instantiateViewControllerWithIdentifier:@"VCGPastel"];
+            [self.navigationController pushViewController:pViewController animated:YES];
+            
+            NSString *temaSel = self.arrDatos[indexPath.row];
+            [pViewController setPTemaSel:temaSel];
+            
+            break;
+        }
 
             
         default:

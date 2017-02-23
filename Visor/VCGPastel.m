@@ -38,7 +38,7 @@
     
     NSArray *colors = @[PNRed, PNBlue, PNGreen,PNYellow,PNDarkBlue, PNFreshGreen,PNLightBlue, PNPinkDark,PNLightYellow, PNMauve,PNCloudWhite, PNHealYellow, PNCleanGrey,PNLightGreen,PNDarkYellow,PNiOSGreenColor];
 
-    
+
     NSMutableArray *temp = [NSMutableArray array];
     for (int i = 0; i < [self.arrDatos count]; i++)
     {
@@ -67,7 +67,6 @@
 
 -(void) obtenerDatos{
 // 0, Id_tipo_grafica, 1, id_trimestre, 2, id_dependencia,  3, desc_corta_dependencia,4 desc_dependencia, 5, id_eje, 6, eje, 7, titulo,8, tipo_grafica
-    [_pTemaSel  objectAtIndex:2];
     
    // NSString *query = @"select  etiqueta, valor from grafica_xy";
    

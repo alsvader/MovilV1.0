@@ -14,6 +14,7 @@
 		936FBDD41E4CD1A300B7069B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD31E4CD1A300B7069B /* Foundation.framework */; };
 		936FBDD61E4CD1B400B7069B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD51E4CD1B400B7069B /* CoreGraphics.framework */; };
 		93B9CA321E4BA81E00861E32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B9CA311E4BA81E00861E32 /* QuartzCore.framework */; };
+		93DE299C1E5F66E400987569 /* VCGBarras.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DE299B1E5F66E400987569 /* VCGBarras.m */; };
 		DA30B72F1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30B72E1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m */; };
 		DA34EB071E40FA1900C78426 /* VCGPastel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA34EB061E40FA1900C78426 /* VCGPastel.m */; };
 		DA5B846E1E37BF6600D56DC9 /* VCIAgrupamientos.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5B846D1E37BF6500D56DC9 /* VCIAgrupamientos.m */; };
@@ -61,6 +62,8 @@
 		936FBDD31E4CD1A300B7069B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		936FBDD51E4CD1B400B7069B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		93B9CA311E4BA81E00861E32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93DE299A1E5F66E400987569 /* VCGBarras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGBarras.h; sourceTree = "<group>"; };
+		93DE299B1E5F66E400987569 /* VCGBarras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGBarras.m; sourceTree = "<group>"; };
 		BF9D67617C8B2E5ECB83B1E8 /* libPods-Visor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Visor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA30B72D1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoTabUniContenido.h; sourceTree = "<group>"; };
 		DA30B72E1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoTabUniContenido.m; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */,
 				9344749B1E5CE83E00FCCB2B /* VCGTemas.h */,
 				9344749C1E5CE83E00FCCB2B /* VCGTemas.m */,
+				93DE299A1E5F66E400987569 /* VCGBarras.h */,
+				93DE299B1E5F66E400987569 /* VCGBarras.m */,
 			);
 			name = Graficas;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 			files = (
 				9344749A1E5CDA8100FCCB2B /* VCGMenuTrimestre.m in Sources */,
 				DA77789C1DDB84E500281706 /* AppDelegate.m in Sources */,
+				93DE299C1E5F66E400987569 /* VCGBarras.m in Sources */,
 				DA5B846E1E37BF6600D56DC9 /* VCIAgrupamientos.m in Sources */,
 				DAC778DB1DEE398F0077EB45 /* VCMenu.m in Sources */,
 				DA7778C51DDB8E1E00281706 /* BDManager.m in Sources */,
