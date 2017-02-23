@@ -9,7 +9,8 @@
 #import "VCMenu.h"
 #import "VCITrimestre.h"
 #import "BDManager.h"
-#import "VCGDIF.h"
+#import "VCGMenuTrimestre.h"
+
 #import "ObjetoTabUniContenido.h"
 
 
@@ -52,9 +53,9 @@ int contador;
 
 - (IBAction)btnGraficas:(id)sender{
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    VCGDIF *pVCITrimestre =[storyBoard instantiateViewControllerWithIdentifier:@"VCGDIF"];
+    VCGMenuTrimestre *pVCITrimestre =[storyBoard instantiateViewControllerWithIdentifier:@"VCGMenuTrimestre"];
     [self.navigationController pushViewController:pVCITrimestre animated:YES];
-    
+ 
 }
 
 - (IBAction)btnActualizarBD:(id)sender{

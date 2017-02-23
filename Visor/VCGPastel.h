@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VCGDIF : UIViewController
+@interface VCGPastel : UIViewController
+
+@property (strong, nonatomic) id pTemaSel;
 
 @end

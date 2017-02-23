@@ -55,7 +55,7 @@
     
     sqlite3 *sqlite3Database;
     NSString *databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
-    // NSLog(@" Ruta de la BD %@", self.documentsDirectory);
+    NSLog(@" Ruta de la BD %@", self.documentsDirectory);
     if (self.arrResults != nil) {
         [self.arrResults removeAllObjects];
         self.arrResults = nil;

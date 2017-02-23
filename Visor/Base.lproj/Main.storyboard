@@ -490,10 +490,10 @@
             </objects>
             <point key="canvasLocation" x="-1257" y="-787"/>
         </scene>
-        <!--VCGDIF-->
+        <!--VCGPastel-->
         <scene sceneID="OyO-Ka-PjX">
             <objects>
-                <viewController storyboardIdentifier="VCGDIF" id="f03-yn-Z2v" customClass="VCGDIF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VCGPastel" id="f03-yn-Z2v" userLabel="VCGPastel" customClass="VCGPastel" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DNX-pp-Urz"/>
                         <viewControllerLayoutGuide type="bottom" id="Xql-sf-Nnp"/>
@@ -520,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DId-7s-4NI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1403" y="-7"/>
+            <point key="canvasLocation" x="37" y="-167"/>
         </scene>
         <!--Proyectos-->
         <scene sceneID="i4g-SW-dno">
@@ -1309,6 +1309,58 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g06-nw-YCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="664" y="-167"/>
+        </scene>
+        <!--TrimestresGraficas-->
+        <scene sceneID="pD6-E4-5Fr">
+            <objects>
+                <tableViewController restorationIdentifier="VCGMenuTrimestre" storyboardIdentifier="VCGMenuTrimestre" title="Trimestres Graficas" id="dxA-o5-9xh" userLabel="TrimestresGraficas" customClass="VCGMenuTrimestre" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="yz8-mQ-7vz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="dxA-o5-9xh" id="nM2-tw-al6"/>
+                            <outlet property="delegate" destination="dxA-o5-9xh" id="owN-J2-xiF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZP-px-xre" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1257" y="-124"/>
+        </scene>
+        <!--Temas Graficas-->
+        <scene sceneID="gjR-ln-I5P">
+            <objects>
+                <viewController storyboardIdentifier="VCGTemas" title="Temas Graficas" id="vvM-l0-cRk" customClass="VCGTemas" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UCs-Lp-aIF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LR7-ly-rqH">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LR7-ly-rqH" id="ilm-69-R4x">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vvM-l0-cRk" id="URH-jC-crj"/>
+                            <outlet property="delegate" destination="vvM-l0-cRk" id="MJb-RN-8wp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="amO-ZR-2KC"/>
+                    <connections>
+                        <outlet property="tableView" destination="UCs-Lp-aIF" id="s8m-id-Ts9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPX-zf-5O7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-619" y="-129"/>
         </scene>
     </scenes>
 </document>
