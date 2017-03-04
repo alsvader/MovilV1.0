@@ -8,6 +8,7 @@ target 'Visor' do
 
   #pod "EChart"
   pod 'PNChart', '~> 0.8'
+  pod 'drCharts', :git => 'https://github.com/Zomato/DR-charts.git'
 
   # Pods for Visor
 
