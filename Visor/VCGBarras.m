@@ -110,7 +110,7 @@
     [barChartView setShowCustomMarkerView:TRUE];
     [barChartView drawBarGraph];
     
-    [self.view addSubview:barChartView];
+    [self.scrollView addSubview:barChartView];
     
 }
 
