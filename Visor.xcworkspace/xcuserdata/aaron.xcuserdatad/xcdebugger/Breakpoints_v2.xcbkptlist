@@ -490,23 +490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/drCharts/dr-Charts/Classes/BarChart/BarChart.m"
-            timestampString = "509656327.933334"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
-            landmarkName = "-createXAxisLine"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/drCharts/dr-Charts/Classes/BarChart/BarChart.m"
-            timestampString = "509656743.431665"
+            timestampString = "510603940.839587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
@@ -522,11 +506,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/drCharts/dr-Charts/Classes/BarChart/BarChart.m"
-            timestampString = "509656785.167734"
+            timestampString = "510603940.839587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "-createXAxisLine"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/drCharts/dr-Charts/Classes/BarChart/BarChart.m"
+            timestampString = "510603940.839587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "-createXAxisLine"
             landmarkType = "5">
          </BreakpointContent>
