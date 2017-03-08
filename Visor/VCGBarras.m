@@ -103,7 +103,7 @@
     [barChartView setGridLineColor:[UIColor lightGrayColor]];
     [barChartView setGridLineWidth:0.3];
     
-    [barChartView setTextFontSize:12];
+    [barChartView setTextFontSize:9];
     [barChartView setTextColor:[UIColor blackColor]];
     [barChartView setTextFont:[UIFont systemFontOfSize:barChartView.textFontSize]];
     
@@ -137,7 +137,7 @@
 }
 
 - (CGFloat)widthForTheBarWithBarNumber:(NSInteger)barNumber{
-    return 40;
+    return 35;
 }
 
 - (NSString *)nameForTheBarWithBarNumber:(NSInteger)barNumber{
