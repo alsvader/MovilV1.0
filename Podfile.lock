@@ -1,15 +1,27 @@
 PODS:
+  - drCharts (1.3)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
   - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
+  - drCharts (from `https://github.com/Zomato/DR-charts.git`)
   - PNChart (~> 0.8)
 
+EXTERNAL SOURCES:
+  drCharts:
+    :git: https://github.com/Zomato/DR-charts.git
+
+CHECKOUT OPTIONS:
+  drCharts:
+    :commit: 116c115a43a77dbe5f852b1a01b4daa6e15b9f99
+    :git: https://github.com/Zomato/DR-charts.git
+
 SPEC CHECKSUMS:
+  drCharts: cd5a3430c82aeaf962c93808754fb4b6ceef8706
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 3939f839a25b28ef26a76f92528f560f419d52ca
+PODFILE CHECKSUM: 94df9b817ba4343f63209d916a40838e9b36fcb5
 
 COCOAPODS: 1.2.0

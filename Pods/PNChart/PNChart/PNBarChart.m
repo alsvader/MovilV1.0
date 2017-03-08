@@ -50,7 +50,7 @@
     _showLabel           = YES;
     _barBackgroundColor  = PNLightGrey;
     _labelTextColor      = [UIColor grayColor];
-    _labelFont           = [UIFont systemFontOfSize:11.0f];
+    _labelFont           = [UIFont systemFontOfSize:9.0f];
     _xChartLabels        = [NSMutableArray array];
     _yChartLabels        = [NSMutableArray array];
     _bars                = [NSMutableArray array];
@@ -124,6 +124,7 @@
 
     PNChartLabel *label = [[PNChartLabel alloc] initWithFrame:CGRectZero];
     label.font = _labelFont;
+    
     label.textColor = _labelTextColor;
     [label setTextAlignment:NSTextAlignmentRight];
     label.text = [NSString stringWithFormat:@"%@%@%@", _yLabelPrefix, labelText, _yLabelSuffix];
@@ -145,6 +146,13 @@
 {
     CGFloat max = [[yLabels valueForKeyPath:@"@max.floatValue"] floatValue];
 
+    /*float max = -MAXFLOAT;
+    
+    for (NSNumber *num in yLabels) {
+        float x = [num floatValue];
+        if (x > max) max = x;
+    }*/
+    
     //ensure max is even
    _yValueMax = max ;
 

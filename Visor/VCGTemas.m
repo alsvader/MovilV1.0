@@ -35,7 +35,7 @@
 -(void) cargarTemas{
     NSString *query = [[NSString alloc] init];
 
-    query = [NSString stringWithFormat: @"%@  %@ ", @"select a.Id_tipo_grafica, d.id_trimestre, a.id_dependencia,  b.desc_corta,b.desc_dependencia, c.id_eje, c.eje, a.titulo,a.tipo from cat_tipo_grafica a, cat_dependencias b, cat_eje c, TAB_GRAFICAS_COLUMNAS_XY d where a.id_tipo_grafica = d.id_tipo_grafica and a.id_dependencia  =b.id_dependencia and b.id_eje=c.id_eje ",  @" order by b.id_eje" ]
+    query = [NSString stringWithFormat: @"%@  %@ ", @"select a.Id_tipo_grafica, d.id_trimestre, a.id_dependencia,  b.desc_corta,b.desc_dependencia, c.id_eje, c.eje, a.titulo,a.tipo, ct.descripcion from cat_tipo_grafica a, cat_dependencias b, cat_eje c, TAB_GRAFICAS_COLUMNAS_XY d, CAT_TRIMESTRE ct where a.id_tipo_grafica = d.id_tipo_grafica and a.id_dependencia  =b.id_dependencia and b.id_eje=c.id_eje and d.id_trimestre =  ct.id_trimestre",  @" order by b.id_eje" ]
    // b.id_eje=c.id_eje and a.id_trimestre =", [_pTrimestreSel objectAtIndex:0] , @" order by b.id_eje" ]
     ;
     if (self.arrDatos != nil){self.arrDatos = nil;}

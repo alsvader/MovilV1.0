@@ -50,12 +50,12 @@
 
     //(40.0, 155.0, 240.0, 240.0)
     
-    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(40.0, 155.0, 240.0, 240.0) items:temp];
+    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(20.0, 100, 240.0, 240.0) items:temp];
     pieChart.descriptionTextColor = [UIColor whiteColor];
     pieChart.descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:11.0];
     [pieChart strokeChart];
     
-    [self.view addSubview:pieChart];
+    [self.scrollView addSubview:pieChart];
     
 }
 
@@ -76,6 +76,41 @@
     
     if (self.arrDatos != nil){self.arrDatos = nil;}
     self.arrDatos = [[NSArray alloc] initWithArray:[self.dbManager loadDataFromDB:query]];
+    
+    self.labelEje.text = [[[_pTemaSel  objectAtIndex:6] stringByAppendingString:@" - "] stringByAppendingString:[_pTemaSel  objectAtIndex:3]];
+    self.labelTrimestre.text = [_pTemaSel  objectAtIndex:9];
+    self.labelGraf.text = [_pTemaSel  objectAtIndex:7];
+    
+    self.etiquetaX.text = [[self.arrDatos objectAtIndex:0]objectAtIndex:0];
+    self.etiquetaY.text = [[self.arrDatos objectAtIndex:0]objectAtIndex:1];
+    
+    
+    NSString *texto = [[NSString alloc] init];
+    NSString *descr = [[NSString alloc] init];
+    NSString *sTem = [[NSString alloc]init];
+    
+    for (int i = 0; i < [self.arrDatos count]; i++) {
+        texto = [NSString stringWithFormat: @"%@ %@ %@", texto, [[self.arrDatos objectAtIndex:i]objectAtIndex:4], @"\n"];
+        
+        sTem = [NSString stringWithFormat:@"%@ ",[[self.arrDatos objectAtIndex:i] objectAtIndex:5]];
+        NSNumber *nTem = @([sTem floatValue]);
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [numberFormatter setNegativeFormat:@"(0.00)"];
+        NSString *sMonto = [numberFormatter stringFromNumber:nTem];
+        
+        descr = [NSString stringWithFormat: @"%@ %@ %@", descr, sMonto, @"\n"];
+        
+    }
+    
+    self.labelValX.text = texto;
+    self.labelValY.text = descr;
+    
+    self.labelValX.lineBreakMode = NSLineBreakByWordWrapping;
+    self.labelValX.numberOfLines = 0;
+    
+    self.labelValY.lineBreakMode = NSLineBreakByWordWrapping;
+    self.labelValY.numberOfLines = 0;
     
 }
 
