@@ -13,8 +13,9 @@
    NSMutableArray *arrayTabUnidadCotenido;
 }
 
-- (IBAction)btnITrimestre:(id)sender;
-- (IBAction)btnActualizarBD:(id)sender;
+//- (IBAction)btnITrimestre:(id)sender;
+//- (IBAction)btnActualizarBD:(id)sender;
+
 
 
 @end

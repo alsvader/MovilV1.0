@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DFD5FDDAC01D3A4AE7D4971 /* libPods-Visor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9D67617C8B2E5ECB83B1E8 /* libPods-Visor.a */; };
 		216FCB03915E374E58BC858B /* libPods-VisorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A67326539BF33B4647F7E53 /* libPods-VisorTests.a */; };
+		933D7FCD1E71CF4400DA675B /* VCILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D7FCC1E71CF4400DA675B /* VCILogin.m */; };
 		9344749A1E5CDA8100FCCB2B /* VCGMenuTrimestre.m in Sources */ = {isa = PBXBuildFile; fileRef = 934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */; };
 		9344749D1E5CE83E00FCCB2B /* VCGTemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 9344749C1E5CE83E00FCCB2B /* VCGTemas.m */; };
 		936FBDD41E4CD1A300B7069B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD31E4CD1A300B7069B /* Foundation.framework */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		3A2395F6C180D2B19ED82676 /* Pods-Visor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Visor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Visor/Pods-Visor.debug.xcconfig"; sourceTree = "<group>"; };
 		7A67326539BF33B4647F7E53 /* libPods-VisorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933D7FCB1E71CF4400DA675B /* VCILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCILogin.h; sourceTree = "<group>"; };
+		933D7FCC1E71CF4400DA675B /* VCILogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCILogin.m; sourceTree = "<group>"; };
 		934474981E5CDA8100FCCB2B /* VCGMenuTrimestre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGMenuTrimestre.h; sourceTree = "<group>"; };
 		934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGMenuTrimestre.m; sourceTree = "<group>"; };
 		9344749B1E5CE83E00FCCB2B /* VCGTemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGTemas.h; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				DAE12E261DEFB70700B32300 /* VCISubtemas.m */,
 				DAD9D7121E2568D700C8541D /* VCIMenuTrimestre.h */,
 				DAD9D7131E2568D700C8541D /* VCIMenuTrimestre.m */,
+				933D7FCB1E71CF4400DA675B /* VCILogin.h */,
+				933D7FCC1E71CF4400DA675B /* VCILogin.m */,
 			);
 			path = Visor;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				DA5B846E1E37BF6600D56DC9 /* VCIAgrupamientos.m in Sources */,
 				DAC778DB1DEE398F0077EB45 /* VCMenu.m in Sources */,
 				DA7778C51DDB8E1E00281706 /* BDManager.m in Sources */,
+				933D7FCD1E71CF4400DA675B /* VCILogin.m in Sources */,
 				DAC778D81DEE351D0077EB45 /* VCITrimestre.m in Sources */,
 				DABF56671E463699001B9E77 /* VCIProcesoLeg.m in Sources */,
 				DA77789F1DDB84E500281706 /* Visor.xcdatamodeld in Sources */,
