@@ -67,7 +67,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tblTemas {
     
-    tblTemas.separatorColor = [UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.7 ];
+    tblTemas.separatorColor = [UIColor colorWithRed:0.243 green: .635 blue:0.690 alpha:0.5 ];
     tblTemas.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     return 1;
 }
@@ -80,19 +80,23 @@
 
     UITableViewCell *cell =  [tblTemas dequeueReusableCellWithIdentifier:@"Cell"] ;
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:0.098  green: 0.133 blue:0.149 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.956 green: 0.956 blue:0.956 alpha:1 ]];
 
+ 
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.font=[UIFont boldSystemFontOfSize:11];
-    cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:12];
+    cell.textLabel.font=[UIFont boldSystemFontOfSize:13];
+    cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:11];
+    
     NSString *desc_tema =[[self.arrDependencias objectAtIndex:indexPath.row] objectAtIndex:0];
     NSString *desc_depen_corta =[[self.arrDependencias objectAtIndex:indexPath.row] objectAtIndex:1];
    
     cell.textLabel.text =  [NSString stringWithFormat:@"%@", desc_tema];
     cell.detailTextLabel.text =[NSString stringWithFormat:@"%@", desc_depen_corta];
     
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.6 ];
-   [cell setBackgroundColor:[UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.1 ]];
-
+         cell.detailTextLabel.textColor = [UIColor colorWithRed:0.098  green: 0.133 blue:0.149 alpha:0.5];
+   
     //Imagen asociada al eje
     NSString *imgEje =[[self.arrDependencias objectAtIndex:indexPath.row] objectAtIndex:6];
     imgEje=[NSString stringWithFormat:@"e%@%@", imgEje, @".png"];

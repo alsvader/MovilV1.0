@@ -89,10 +89,17 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    tableView.separatorColor = [UIColor colorWithRed:0.243 green: .635 blue:0.690 alpha:0.5 ];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+
+    
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
    
     NSInteger secciones = [[self arrTrimestreSecciones] count];
+    
+    
     
     return secciones;
 }
@@ -113,10 +120,16 @@
     UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"Cell"] ;
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     
+    
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font=[UIFont boldSystemFontOfSize:11];
     cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:12];
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:0.333 green: 0.380 blue:0.419 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.243 green: 0.632 blue:0.690 alpha:0.1 ]];
+    
 
+    
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex:[indexPath section]];
     NSString *contFila = [ [contenido objectAtIndex:[indexPath row]] objectAtIndex:1];
     cell.textLabel.text =  contFila;
@@ -128,6 +141,7 @@
 {
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex: section];
     NSString *titulo = [ [contenido objectAtIndex:0]objectAtIndex:2];
+    
     
     if ([titulo  isEqual:@"2020"])
     {
