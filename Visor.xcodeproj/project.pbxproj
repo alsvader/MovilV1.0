@@ -12,6 +12,8 @@
 		933D7FCD1E71CF4400DA675B /* VCILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D7FCC1E71CF4400DA675B /* VCILogin.m */; };
 		9344749A1E5CDA8100FCCB2B /* VCGMenuTrimestre.m in Sources */ = {isa = PBXBuildFile; fileRef = 934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */; };
 		9344749D1E5CE83E00FCCB2B /* VCGTemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 9344749C1E5CE83E00FCCB2B /* VCGTemas.m */; };
+		935656481E85B36900070608 /* ObjetoTema.m in Sources */ = {isa = PBXBuildFile; fileRef = 935656471E85B36900070608 /* ObjetoTema.m */; };
+		9356564B1E85B38000070608 /* ObjetoSubtema.m in Sources */ = {isa = PBXBuildFile; fileRef = 9356564A1E85B38000070608 /* ObjetoSubtema.m */; };
 		936FBDD41E4CD1A300B7069B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD31E4CD1A300B7069B /* Foundation.framework */; };
 		936FBDD61E4CD1B400B7069B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD51E4CD1B400B7069B /* CoreGraphics.framework */; };
 		93B9CA321E4BA81E00861E32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B9CA311E4BA81E00861E32 /* QuartzCore.framework */; };
@@ -62,6 +64,10 @@
 		934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGMenuTrimestre.m; sourceTree = "<group>"; };
 		9344749B1E5CE83E00FCCB2B /* VCGTemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGTemas.h; sourceTree = "<group>"; };
 		9344749C1E5CE83E00FCCB2B /* VCGTemas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGTemas.m; sourceTree = "<group>"; };
+		935656461E85B36900070608 /* ObjetoTema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoTema.h; sourceTree = "<group>"; };
+		935656471E85B36900070608 /* ObjetoTema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoTema.m; sourceTree = "<group>"; };
+		935656491E85B38000070608 /* ObjetoSubtema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoSubtema.h; sourceTree = "<group>"; };
+		9356564A1E85B38000070608 /* ObjetoSubtema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoSubtema.m; sourceTree = "<group>"; };
 		936FBDD31E4CD1A300B7069B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		936FBDD51E4CD1B400B7069B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		93B9CA311E4BA81E00861E32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -171,6 +177,10 @@
 			children = (
 				DA30B72D1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.h */,
 				DA30B72E1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m */,
+				935656461E85B36900070608 /* ObjetoTema.h */,
+				935656471E85B36900070608 /* ObjetoTema.m */,
+				935656491E85B38000070608 /* ObjetoSubtema.h */,
+				9356564A1E85B38000070608 /* ObjetoSubtema.m */,
 			);
 			name = Actualizacion;
 			sourceTree = "<group>";
@@ -491,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935656481E85B36900070608 /* ObjetoTema.m in Sources */,
 				9344749A1E5CDA8100FCCB2B /* VCGMenuTrimestre.m in Sources */,
 				DA77789C1DDB84E500281706 /* AppDelegate.m in Sources */,
 				93DE299C1E5F66E400987569 /* VCGBarras.m in Sources */,
@@ -504,6 +515,7 @@
 				DA30B72F1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m in Sources */,
 				DA7778A21DDB84E500281706 /* VCITemas.m in Sources */,
 				DAD9D7141E2568D700C8541D /* VCIMenuTrimestre.m in Sources */,
+				9356564B1E85B38000070608 /* ObjetoSubtema.m in Sources */,
 				DA5B84711E37C83300D56DC9 /* VCIReuniones.m in Sources */,
 				DAE12E271DEFB70700B32300 /* VCISubtemas.m in Sources */,
 				DA6CCFEE1E3917620035384F /* VCIIngresos.m in Sources */,

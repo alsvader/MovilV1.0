@@ -11,6 +11,7 @@
 @interface VCMenu : UIViewController
 {
    NSMutableArray *arrayTabUnidadCotenido;
+   NSString *sUrl;
 }
 
 //- (IBAction)btnITrimestre:(id)sender;

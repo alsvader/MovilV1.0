@@ -13,7 +13,13 @@
 @interface VCITemas : UIViewController
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bAlfabetico;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bDependencia;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bEje;
 
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *bAlfabetico;
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *bDependencia;
+//@property (weak, nonatomic) IBOutlet UIBarButtonItem *bEje;
 //Parametros
 @property (strong, nonatomic) id pTrimestreSel;
 
