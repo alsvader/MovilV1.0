@@ -127,7 +127,7 @@ int orden;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tblTemas {
     
-    tblTemas.separatorColor = [UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.7 ];
+    tblTemas.separatorColor = [UIColor colorWithRed:0.788  green: 0.784 blue:0.803 alpha:1 ];
     tblTemas.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     return 1;
 }
@@ -169,8 +169,8 @@ int orden;
     cell.textLabel.text =  [NSString stringWithFormat:@"%@", desc_tema];
     cell.detailTextLabel.text =[NSString stringWithFormat:@"%@", desc_depen_corta];
     
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.6 ];
-    [cell setBackgroundColor:[UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.1 ]];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.576 green: 0.592 blue:0.611 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.952 green: 0.952 blue:0.952 alpha:1 ]];
     
     //Imagen asociada al eje
     NSString *imgEje =[[self.arrDependencias objectAtIndex:indexPath.row] objectAtIndex:6];

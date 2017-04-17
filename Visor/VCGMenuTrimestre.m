@@ -111,6 +111,17 @@
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    
+    UIView *tView=[[UIView alloc]initWithFrame:CGRectMake(0,0,140,0)];
+    if (section==0) {
+        tView.backgroundColor=[UIColor  colorWithRed:0.419 green: 0.752 blue:0.862 alpha:1];
+        
+    }
+    else if (section==1)
+    {tView.backgroundColor=[UIColor  colorWithRed:0.784 green: 0.835 blue:0.117 alpha:1];
+    }
+    
+    
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex: section];
     NSString *titulo = [ [contenido objectAtIndex:0]objectAtIndex:2];
     
