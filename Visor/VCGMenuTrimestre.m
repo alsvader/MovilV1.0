@@ -102,24 +102,51 @@
     cell.textLabel.font=[UIFont boldSystemFontOfSize:11];
     cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:12];
     
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:0.356 green: 0.380 blue:0.407 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.909 green: 0.909 blue:0.905 alpha:1 ]];
+    
+    
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex:[indexPath section]];
     NSString *contFila = [ [contenido objectAtIndex:[indexPath row]] objectAtIndex:1];
     cell.textLabel.text =  contFila;
-    
+    cell.imageView.image =[UIImage imageNamed:@"Image-12.jpg"];
     return cell;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *tView=[[UIView alloc]initWithFrame:CGRectMake(0,0,0,0)];
+    
+        tView.backgroundColor=[UIColor  colorWithRed:0.419 green: 0.752 blue:0.862 alpha:1];
+        
+    
+    UILabel *tLabel=[[UILabel alloc]initWithFrame:CGRectMake(10,0,180,40)];
+    
+    // tLabel.backgroundColor=[UIColor blueColor];
+    
+    tLabel.textColor = [UIColor colorWithRed:1 green: 1 blue:1 alpha:1];
+    tLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
+    // tempLabel.font = [UIFont boldSystemFontOfSize:fontSizeForHeaders];
+    
+    tLabel.font = [UIFont boldSystemFontOfSize:14];
+    
+    NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex: section];
+    NSString *titulo = [ [contenido objectAtIndex:0]objectAtIndex:2];
+    tLabel.text=titulo;
+    
+    [tView addSubview:tLabel];
+    
+    
+
+    
+    return tView;
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     
-    UIView *tView=[[UIView alloc]initWithFrame:CGRectMake(0,0,140,0)];
-    if (section==0) {
-        tView.backgroundColor=[UIColor  colorWithRed:0.419 green: 0.752 blue:0.862 alpha:1];
-        
-    }
-    else if (section==1)
-    {tView.backgroundColor=[UIColor  colorWithRed:0.784 green: 0.835 blue:0.117 alpha:1];
-    }
+   
+    
     
     
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex: section];
