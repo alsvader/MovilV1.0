@@ -99,9 +99,9 @@ NSString *idUnidadContSel;
     
     cell.textLabel.text =  [NSString stringWithFormat:@"%@", desc_subtema];
     
-    cell.textLabel.textColor = [UIColor colorWithRed:0.333 green: 0.380 blue:0.419 alpha:1 ];
-    [cell setBackgroundColor:[UIColor colorWithRed:0.75 green: 0.945 blue:0.941 alpha:0.1 ]];
     
+    cell.textLabel.textColor = [UIColor colorWithRed:0.223 green: 0.211 blue:0.286 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.909 green: 0.909 blue:0.905 alpha:1 ]];
     
     return cell;
 }

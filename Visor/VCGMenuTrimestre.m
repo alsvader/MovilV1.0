@@ -103,7 +103,7 @@
     cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:12];
     
     
-    cell.textLabel.textColor = [UIColor colorWithRed:0.356 green: 0.380 blue:0.407 alpha:1 ];
+    cell.textLabel.textColor = [UIColor colorWithRed:0.223 green: 0.250 blue:0.286 alpha:1 ];
     [cell setBackgroundColor:[UIColor colorWithRed:0.909 green: 0.909 blue:0.905 alpha:1 ]];
     
     
