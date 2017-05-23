@@ -19,6 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    
+    [self.lbDescprogLeg setHidden:true];
+    [self.lbIniciativa setHidden:true];
+    [self.lbAprobada setHidden:true];
+    [self.txtPublicada setHidden:true];
+    [self.txtEnvigor setHidden:true];
+    [self.txtObservaciones setHidden:true];
+    
+    
+    [self.etDescprogLeg setHidden:true];
+    [self.etIniciativa setHidden:true];
+    [self.etAprobada setHidden:true];
+    [self.etPublicada setHidden:true];
+    [self.etEnvigor setHidden:true];
+    [self.etObservaciones setHidden:true];
     
     self.dbManager = [[BDManager alloc] initWithDatabaseFileName:@"bd_visor.sqlite"];
     [self obtenerDatos];
@@ -54,13 +70,50 @@
         self.lbDependencia.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:1];
         self.txtTema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:3];
         self.txtSubtema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:4];
+      
         
-         self.lbDescprogLeg.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
-         self.lbIniciativa.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:6];
-         self.lbAprobada.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:7];
-         self.txtPublicada.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
-         self.txtEnvigor.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:9];
-         self.txtObservaciones.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:10];
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:5] length]>0)
+        {
+            self.lbDescprogLeg.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
+            [self.lbDescprogLeg setHidden:false];[self.etDescprogLeg setHidden:false];
+        }
+
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:6] length]>0)
+        {
+            self.lbIniciativa.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:6];
+            [self.lbIniciativa setHidden:false];[self.etIniciativa setHidden:false];
+        }
+        
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:7] length]>0)
+        {
+            self.lbAprobada.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:7];
+            [self.lbAprobada setHidden:false];[self.etAprobada setHidden:false];
+        }
+        
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:8] length]>0)
+        {
+            self.txtPublicada.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+            [self.txtPublicada setHidden:false];[self.etPublicada setHidden:false];
+        }
+        
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:9] length]>0)
+        {
+            self.txtEnvigor.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:9];
+            [self.txtEnvigor setHidden:false];[self.etEnvigor setHidden:false];
+        }
+        
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:10] length]>0)
+        {
+            self.txtObservaciones.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:10];
+            [self.txtObservaciones setHidden:false];[self.etObservaciones setHidden:false];
+        }
+        
+       //  self.lbDescprogLeg.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
+       //  self.lbIniciativa.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:6];
+        // self.lbAprobada.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:7];
+       //  self.txtPublicada.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+      //   self.txtEnvigor.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:9];
+        // self.txtObservaciones.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:10];
     }
 }
 

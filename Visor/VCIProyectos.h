@@ -21,6 +21,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbMonto;
 @property (weak, nonatomic) IBOutlet UILabel *lbEstatus;
 
+@property (weak, nonatomic) IBOutlet UILabel *etDescripcion;
+@property (weak, nonatomic) IBOutlet UILabel *etMonto;
+@property (weak, nonatomic) IBOutlet UILabel *etEstatus;
+
+
 //Parametros
 @property (strong, nonatomic) id pSubTemaSel;
 

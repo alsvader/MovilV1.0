@@ -59,10 +59,10 @@ NSString *idUnidadContSel;
     NSString *query =[[NSString alloc]init];
     if ([[_pTemaSel  objectAtIndex:1]  isEqual:@"CGAJ"])
     {
-       query = [NSString stringWithFormat:@"%@ %@ %@ ", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,   @"order by   a.descripcion" ];
+       query = [NSString stringWithFormat:@"%@ %@ %@ %@ ", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido, '", [_pTemaSel objectAtIndex:5] ,  @"' from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,   @"order by   a.descripcion" ];
     }
     else
-    {  query = [NSString stringWithFormat:@"%@ %@ %@ %@ %@", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,  @" and id_trimestre = ", [_pTemaSel  objectAtIndex:4], @"order by   a.descripcion" ];  }
+    {  query = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido, '", [_pTemaSel objectAtIndex:5] ,  @"' from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,  @" and id_trimestre = ", [_pTemaSel  objectAtIndex:4], @"order by   a.descripcion" ];  }
     
 //    pIdTema
     if (self.arrSubtemas != nil){self.arrSubtemas = nil;}

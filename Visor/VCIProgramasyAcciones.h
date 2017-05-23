@@ -23,6 +23,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAvance;
 @property (weak, nonatomic) IBOutlet UILabel *lbBeneficiario;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *etMonto;
+@property (weak, nonatomic) IBOutlet UILabel *etFuenteFinanciamiento;
+@property (weak, nonatomic) IBOutlet UILabel *etBeneficio;
+@property (weak, nonatomic) IBOutlet UILabel *etAvance;
+@property (weak, nonatomic) IBOutlet UILabel *etBeneficiario;
+
+
+
 //Parametros
 @property (strong, nonatomic) id pSubTemaSel;
 

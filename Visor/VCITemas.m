@@ -30,7 +30,20 @@ int orden;
     _bAlfabetico.tintColor = [UIColor blueColor];
     _bDependencia.tintColor = [UIColor grayColor];
     _bEje.tintColor = [UIColor grayColor];
+   // _searchBar.placeholder =@"Buscar";
+    //_searchBar.scopeButtonTitles.
+    //_searchBar.showsCancelButton
     
+    for(id cc in [_searchBar subviews])
+    {
+        if([cc isKindOfClass:[UIButton class]])
+        {
+            UIButton *btn = (UIButton *)cc;
+            [btn setTitle:@"Cancelar codigo" forState:UIControlStateNormal];
+        }
+        
+    }
+
 }
 
 - (IBAction)bAlfabetico:(id)sender {
@@ -112,7 +125,7 @@ int orden;
             
     };
     
-    if ([[_pTrimestreSel objectAtIndex:2] isEqual:@"2020"]) {
+    if ([[_pTrimestreSel objectAtIndex:2] isEqual:@"2030"]) {
         //Obtener Temas de la dependencia Asuntos juridicos.
         query = [NSString stringWithFormat: @"%@ %@ %@ %@ %@ %@ %@", @"Select distinct a.descripcion,b.desc_corta,a.id_tema,a.id_unidad,", [_pTrimestreSel objectAtIndex:0] , @",'", [_pTrimestreSel objectAtIndex:1],@"', b.id_eje,c.eje from tab_unidades_contenido uc, cat_tema a, cat_dependencias b, cat_eje c where uc.id_tema=a.id_tema and a.id_dependencia= b.id_dependencia and b.id_eje=c.id_eje and uc.id_dependencia=", [_pTrimestreSel objectAtIndex:0] , sOrden ];
     }
@@ -202,7 +215,10 @@ int orden;
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller
 shouldReloadTableForSearchString:(NSString *)searchString
 {
+   
     [self searchFilter:searchString];
+    
+    
     return YES;
 }
 

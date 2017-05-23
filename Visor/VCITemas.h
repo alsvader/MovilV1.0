@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bAlfabetico;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bDependencia;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bEje;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 //@property (weak, nonatomic) IBOutlet UIBarButtonItem *bAlfabetico;
 //@property (weak, nonatomic) IBOutlet UIBarButtonItem *bDependencia;

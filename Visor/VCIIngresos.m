@@ -25,7 +25,11 @@
     
     self.lbTipoIngreso.text=@"";
     self.lbMonto.text= @"";
-
+    
+     [self.lbTipoIngreso setHidden:true];
+     [self.lbMonto setHidden:true];
+     [self.etTipoIngreso setHidden:true];
+       [self.etMonto setHidden:true];
     
     self.dbManager = [[BDManager alloc] initWithDatabaseFileName:@"bd_visor.sqlite"];
     [self obtenerDatos];
@@ -49,6 +53,10 @@
 
 -(void) obtenerDatos{
     
+    NSString *sNum;
+    double nTmp ;
+    NSNumber *nNumf;
+    
     NSString *query = [NSString stringWithFormat: @"%@ %@",@"Select d.eje,c.desc_corta dependencia, e. descripcion trimestre, a.descripcion tema, b.descripcion  subtema, uc.desc_tipo_ingreso,uc.monto, uc.desc_monto from tab_unidades_contenido uc, cat_tema a, cat_subtema b, cat_dependencias c,cat_eje d, cat_trimestre  e where uc.id_tema =a.id_tema and                       uc.id_subtema=b.id_subtema and uc.id_dependencia =c.id_dependencia and                       c.id_eje=d.id_eje and uc.id_trimestre=e.id_trimestre and uc.Id_unidades_contenido = ", [ _pSubTemaSel objectAtIndex:3 ] ];
     
     if (self.arrDatos != nil){self.arrDatos = nil;}
@@ -58,12 +66,34 @@
     {
         self.lbEje.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:0];
         self.lbDependencia.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:1];
-        self.lbTrimestre.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:2];
+       // self.lbTrimestre.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:2];
+        self.lbTrimestre.text=[ _pSubTemaSel objectAtIndex:4 ];
         self.lbTema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:3];
         self.lbSubtema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:4];
+       
         
-        self.lbTipoIngreso.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
-        self.lbMonto.text= [NSString stringWithFormat:@"%@ %@",[[self.arrDatos objectAtIndex:0] objectAtIndex:6], [[self.arrDatos objectAtIndex:0] objectAtIndex:7]];
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:5] length]>0)
+        {
+            self.lbTipoIngreso.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
+            [self.lbTipoIngreso setHidden:false];[self.etTipoIngreso setHidden:false];
+        }
+
+        sNum = [NSString stringWithFormat:@"%@ ",[[self.arrDatos objectAtIndex:0] objectAtIndex:6]];
+        nNumf = @([sNum floatValue]);
+        nTmp = [sNum floatValue];
+        if (nTmp>0)
+        {
+            NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+            [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];            ;
+            [numberFormatter setNegativeFormat:@"(0.00)"];
+            NSString *sMonto = [numberFormatter stringFromNumber:nNumf];
+            self.lbMonto.text= [NSString stringWithFormat:@"%@ %@", sMonto, [[self.arrDatos objectAtIndex:0] objectAtIndex:7]];
+            [self.lbMonto setHidden:false];[self.etMonto setHidden:false];
+        }
+
+        
+        //self.lbTipoIngreso.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
+        //self.lbMonto.text= [NSString stringWithFormat:@"%@ %@",[[self.arrDatos objectAtIndex:0] objectAtIndex:6], [[self.arrDatos objectAtIndex:0] objectAtIndex:7]];
         
     }
 }

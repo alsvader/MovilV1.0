@@ -24,6 +24,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAvfisicoValor;
 @property (weak, nonatomic) IBOutlet UILabel *lbBeneficiarioValor;
 
+@property (weak, nonatomic) IBOutlet UITextView *etSubtema;
+@property (weak, nonatomic) IBOutlet UILabel *etDescValor;
+@property (weak, nonatomic) IBOutlet UILabel *etFfinanValor;
+@property (weak, nonatomic) IBOutlet UILabel *etMonto;
+@property (weak, nonatomic) IBOutlet UILabel *etCantidad;
+@property (weak, nonatomic) IBOutlet UILabel *etBeneficiario;
+@property (weak, nonatomic) IBOutlet UILabel *etAvfisico;
+
 
 //Parametros
 @property (strong, nonatomic) id pSubTemaSel;
