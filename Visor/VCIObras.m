@@ -8,11 +8,14 @@
 
 #import "VCIObras.h"
 #import "BDManager.h"
+#import "cUtilerias.h"
 
 @interface VCIObras ()
 
 @property (nonatomic, strong) BDManager *dbManager;
+@property (nonatomic, strong) cUtilerias *utils;
 @property (nonatomic, strong) NSArray *arrDatos;
+
 
 @end
 
@@ -22,13 +25,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.lbDescValor.text=@"";
-    self.lbMonto.text= @"";
-    self.lbAvfisicoValor.text=@"";
-    self.lbBeneficiarioValor.text= @"";
-    
-    self.lbCantidadValor.text=@"";
-    self.lbFfinanValor.text=@"";
+   [self.lbDescValor setHidden:true];
+   [self.lbMonto setHidden:true];
+   [self.lbAvfisicoValor setHidden:true];
+   [self.lbBeneficiarioValor setHidden:true];
+   [self.lbCantidadValor setHidden:true];
+   [self.lbFfinanValor setHidden:true];
+  
+   [self.etDescValor setHidden:true];
+   [self.etFfinanValor setHidden:true];
+   [self.etMonto setHidden:true];
+   [self.etCantidad setHidden:true];
+   [self.etBeneficiario setHidden:true];
+   [self.etAvfisico setHidden:true];
+ 
     self.dbManager = [[BDManager alloc] initWithDatabaseFileName:@"bd_visor.sqlite"];
     [self obtenerDatos];
 }
@@ -63,24 +73,73 @@
         
         self.lbEje.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:0];
         self.lbDependencia.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:1];
-        self.lbTrimestre.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:2];
+        //self.lbTrimestre.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:2];
+        self.lbTrimestre.text=[ _pSubTemaSel objectAtIndex:4 ];
         self.lbTema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:3];
         self.lbSubtema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:4];
-
         
-        self.lbDescValor.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+     
+        //*** Asignacion de valores y visualizacion de etiquetas****
+        
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:8] length]>0)
+        {
+           self.lbDescValor.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+           [self.lbDescValor setHidden:false];[self.etDescValor setHidden:false];
+        }
+        
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:8] length]>0)
+        {
+            self.lbDescValor.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+            [self.lbDescValor setHidden:false];[self.etDescValor setHidden:false];
+        }
+
         sTem = [NSString stringWithFormat:@"%@ ",[[self.arrDatos objectAtIndex:0] objectAtIndex:5]];
         NSNumber *nTem = @([sTem floatValue]);
-        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-        [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-        [numberFormatter setNegativeFormat:@"(0.00)"];
-        NSString *sMonto = [numberFormatter stringFromNumber:nTem];
-        self.lbMonto.text= [NSString stringWithFormat:@"%@ %@", sMonto, [[self.arrDatos objectAtIndex:0] objectAtIndex:11]];
-        self.lbAvfisicoValor.text=[NSString stringWithFormat:@"%@ %@", [[self.arrDatos objectAtIndex:0] objectAtIndex:6], @"%" ];
-        self.lbBeneficiarioValor.text= [NSString stringWithFormat:@"%@ %@",[[self.arrDatos objectAtIndex:0] objectAtIndex:7], [[self.arrDatos objectAtIndex:0] objectAtIndex:10]]; ;
-        self.lbCantidadValor.text=[[self.arrDatos objectAtIndex:0] objectAtIndex:9];
+        double nTmp = [sTem floatValue];
+        if (nTmp>0)
+        {
+            NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+            [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];            ;
+            [numberFormatter setNegativeFormat:@"(0.00)"];
+            NSString *sMonto = [numberFormatter stringFromNumber:nTem];            
+            self.lbMonto.text= [NSString stringWithFormat:@"%@ %@", sMonto, [[self.arrDatos objectAtIndex:0] objectAtIndex:11]];
+            [self.lbMonto setHidden:false];[self.etMonto setHidden:false];
+        }
+        
+        double  npd = [[[self.arrDatos objectAtIndex:0] objectAtIndex:6] doubleValue];
+        if (npd>0)        {
+            self.lbAvfisicoValor.text=[NSString stringWithFormat:@"%@ %@", [[self.arrDatos objectAtIndex:0] objectAtIndex:6], @"%" ];
+            [self.lbAvfisicoValor setHidden:false];[self.etAvfisico setHidden:false];
+        }
+        
+        sTem = [NSString stringWithFormat:@"%@ ",[[self.arrDatos objectAtIndex:0] objectAtIndex:7]];
+        NSNumber *nTemb = @([sTem floatValue]);
+        double  nBen = [sTem doubleValue];
+        if (nBen>0)
+        {
+            NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+            [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];            ;
+            [numberFormatter setNegativeFormat:@"(0.00)"];
+            NSString *sBenef = [numberFormatter stringFromNumber:nTemb];
+            self.lbBeneficiarioValor.text= [NSString stringWithFormat:@"%@ %@", sBenef, [[self.arrDatos objectAtIndex:0] objectAtIndex:10]];
+            [self.lbBeneficiarioValor setHidden:false];[self.etBeneficiario setHidden:false];
+        }
+        
+        sTem = [NSString stringWithFormat:@"%@ ",[[self.arrDatos objectAtIndex:0] objectAtIndex:9]];
+        double nCan = [sTem floatValue];
+        if (nCan>0)
+        {
+             self.lbCantidadValor.text=[[self.arrDatos objectAtIndex:0] objectAtIndex:9];
+            [self.lbCantidadValor setHidden:false];[self.etCantidad setHidden:false];
+        }
+       
+        if ([[[self.arrDatos objectAtIndex:0] objectAtIndex:12] length]>0)
+        {
         self.lbFfinanValor.text=[[self.arrDatos objectAtIndex:0] objectAtIndex:12];
-    
+         [self.lbFfinanValor setHidden:false];[self.etFfinanValor setHidden:false];
+        }
+
+        
     }
 }
 

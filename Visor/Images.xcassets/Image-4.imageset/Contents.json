@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "vv.png",
+      "filename" : "CONTRA.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "vv-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "vv-2.png",
       "scale" : "3x"
     }
   ],

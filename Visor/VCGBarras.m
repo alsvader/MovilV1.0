@@ -90,7 +90,7 @@
 
 -(void) drawChart {
     
-    BarChart *barChartView = [[BarChart alloc] initWithFrame:CGRectMake(0, 95, WIDTH(self.view) - 10, HEIGHT(self.view) - 200)];
+    BarChart *barChartView = [[BarChart alloc] initWithFrame:CGRectMake(0, 10, WIDTH(self.view) - 10, HEIGHT(self.VWgrafica) - 10)];
     [barChartView setDataSource:self];
     [barChartView setDelegate:self];
     
@@ -110,7 +110,7 @@
     [barChartView setShowCustomMarkerView:TRUE];
     [barChartView drawBarGraph];
     
-    [self.scrollView addSubview:barChartView];
+    [self.VWgrafica addSubview:barChartView];
     
 }
 

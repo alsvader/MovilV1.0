@@ -11,10 +11,12 @@
 @interface VCMenu : UIViewController
 {
    NSMutableArray *arrayTabUnidadCotenido;
+   NSString *sUrl;
 }
 
-- (IBAction)btnITrimestre:(id)sender;
-- (IBAction)btnActualizarBD:(id)sender;
+//- (IBAction)btnITrimestre:(id)sender;
+//- (IBAction)btnActualizarBD:(id)sender;
+
 
 
 @end

@@ -36,7 +36,13 @@
                        [PNPieChartDataItem dataItemWithValue:40 color:PNGreen description:@"GOOL I/O"],
                        ];
     
-    NSArray *colors = @[PNRed, PNBlue, PNGreen,PNYellow,PNDarkBlue, PNFreshGreen,PNLightBlue, PNPinkDark,PNLightYellow, PNMauve,PNCloudWhite, PNHealYellow, PNCleanGrey,PNLightGreen,PNDarkYellow,PNiOSGreenColor];
+    #define Verdealto [UIColor colorWithRed:0.784 green:0.835 blue:0.117 alpha:1]
+    
+#define Azulfuerte [UIColor colorWithRed:0.419 green:0.752 blue:0.862 alpha:1]
+
+    #define naranjaalto [UIColor colorWithRed:0.792 green:0.329 blue:0.062 alpha:1]
+    
+    NSArray *colors = @[Verdealto, Azulfuerte, naranjaalto,Verdealto, Azulfuerte, naranjaalto,Verdealto, Azulfuerte, naranjaalto];
 
 
     NSMutableArray *temp = [NSMutableArray array];

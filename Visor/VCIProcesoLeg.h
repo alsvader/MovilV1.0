@@ -23,6 +23,13 @@
 @property (weak, nonatomic) IBOutlet UITextView *txtEnvigor;
 @property (weak, nonatomic) IBOutlet UITextView *txtObservaciones;
 
+@property (weak, nonatomic) IBOutlet UILabel *etDescprogLeg;
+@property (weak, nonatomic) IBOutlet UILabel *etIniciativa;
+@property (weak, nonatomic) IBOutlet UILabel *etAprobada;
+@property (weak, nonatomic) IBOutlet UILabel *etPublicada;
+@property (weak, nonatomic) IBOutlet UILabel *etEnvigor;
+@property (weak, nonatomic) IBOutlet UILabel *etObservaciones;
+
 
 //Parametros
 @property (strong, nonatomic) id pSubTemaSel;

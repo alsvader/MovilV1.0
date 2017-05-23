@@ -59,10 +59,10 @@ NSString *idUnidadContSel;
     NSString *query =[[NSString alloc]init];
     if ([[_pTemaSel  objectAtIndex:1]  isEqual:@"CGAJ"])
     {
-       query = [NSString stringWithFormat:@"%@ %@ %@ ", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,   @"order by   a.descripcion" ];
+       query = [NSString stringWithFormat:@"%@ %@ %@ %@ ", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido, '", [_pTemaSel objectAtIndex:5] ,  @"' from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,   @"order by   a.descripcion" ];
     }
     else
-    {  query = [NSString stringWithFormat:@"%@ %@ %@ %@ %@", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,  @" and id_trimestre = ", [_pTemaSel  objectAtIndex:4], @"order by   a.descripcion" ];  }
+    {  query = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@", @"Select a.id_tema, a.id_subtema, a.descripcion, b.id_unidades_contenido, '", [_pTemaSel objectAtIndex:5] ,  @"' from cat_subtema a,  tab_unidades_contenido b where a.id_subtema=b.id_subtema and a.id_tema = ", [_pTemaSel  objectAtIndex:2] ,  @" and id_trimestre = ", [_pTemaSel  objectAtIndex:4], @"order by   a.descripcion" ];  }
     
 //    pIdTema
     if (self.arrSubtemas != nil){self.arrSubtemas = nil;}
@@ -99,9 +99,9 @@ NSString *idUnidadContSel;
     
     cell.textLabel.text =  [NSString stringWithFormat:@"%@", desc_subtema];
     
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.244 green: .244 blue:0.244 alpha:0.6 ];
-    [cell setBackgroundColor:[UIColor colorWithRed:0.75 green: 0.84 blue:0.18 alpha:0.1 ]];
     
+    cell.textLabel.textColor = [UIColor colorWithRed:0.223 green: 0.211 blue:0.286 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.909 green: 0.909 blue:0.905 alpha:1 ]];
     
     return cell;
 }

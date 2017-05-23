@@ -22,6 +22,12 @@
 //@property (weak, nonatomic) IBOutlet UILabel *lbFechaFin;
 @property (weak, nonatomic) IBOutlet UITextView *lbMotivo;
 //Parametros
+
+@property (weak, nonatomic) IBOutlet UILabel *etMotivo;
+@property (weak, nonatomic) IBOutlet UILabel *etLugar;
+@property (weak, nonatomic) IBOutlet UILabel *etFechaInicio;
+
+
 @property (strong, nonatomic) id pSubTemaSel;
 
 

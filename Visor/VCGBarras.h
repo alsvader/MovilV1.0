@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *viewChart;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *VWgrafica;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelEje;
 @property (weak, nonatomic) IBOutlet UILabel *labelDep;

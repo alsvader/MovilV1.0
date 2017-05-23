@@ -42,8 +42,8 @@
 }
 
 -(void) loadTrimestres{
-    NSString *query = [NSString stringWithFormat:@"select id_trimestre,descripcion,anio from                        (Select id_trimestre, descripcion, anio, fecha_inicio from cat_trimestre union                         select  id_dependencia, desc_dependencia, 2020, date ('2020-01-01') fecha from cat_dependencias                         where id_dependencia =2) order by date (fecha_inicio), anio DESC " ];
-   if (self.arrTrimestre != nil){self.arrTrimestre = nil;}
+    NSString *query = [NSString stringWithFormat:@"select id_trimestre,descripcion,anio from                        (Select id_trimestre, descripcion, anio, fecha_inicio from cat_trimestre union                         select  id_dependencia, desc_dependencia, 2030, date ('2030-01-01') fecha from cat_dependencias                         where id_dependencia =2 union select id_trimestre, case when anio ='2014' then '2do Informe de Gobierno' when anio='2015' then '3er Informe de Gobierno'  when anio='2016' then '4to Informe de Gobierno' when anio='2017' then '5to Informe de Gobierno' when anio='2018' then '6to Informe de Gobierno'   end , '2020', date ('2020-01-01') fecha from cat_trimestre where substr (fecha_inicio,6,2) = '07' ) order by date (fecha_inicio) , anio DESC " ];
+    if (self.arrTrimestre != nil){self.arrTrimestre = nil;}
     self.arrTrimestre = [[NSArray alloc] initWithArray:[self.dbManager loadDataFromDB:query]];
 }
 
@@ -59,7 +59,7 @@
         tAnio =[i objectAtIndex:2 ];
         if (![tAnioAnt isEqualToString:tAnio])
         {
-           [self.arrTrimestreSecciones  addObject:arrTrimTemp];
+            [self.arrTrimestreSecciones  addObject:arrTrimTemp];
             arrTrimTemp =Nil;
             arrTrimTemp = [[NSMutableArray alloc] init ] ;
             tAnioAnt=[i objectAtIndex:2];
@@ -67,14 +67,14 @@
         }
         else
         {
-           tAnioAnt=[i objectAtIndex:2];
-           [arrTrimTemp addObject:i];
-         }
+            tAnioAnt=[i objectAtIndex:2];
+            [arrTrimTemp addObject:i];
+        }
     }
     if ([arrTrimTemp count] >0)
     {
-         [self.arrTrimestreSecciones addObject:arrTrimTemp];
-         arrTrimTemp =Nil;
+        [self.arrTrimestreSecciones addObject:arrTrimTemp];
+        arrTrimTemp =Nil;
     }
     
 }
@@ -89,10 +89,17 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    tableView.separatorColor = [UIColor colorWithRed:0.952 green: 0.952 blue:0.952 alpha:1 ];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+
+    
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
    
     NSInteger secciones = [[self arrTrimestreSecciones] count];
+    
+    
     
     return secciones;
 }
@@ -106,6 +113,62 @@
     return filas;
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *tView=[[UIView alloc]initWithFrame:CGRectMake(0,0,0,0)];
+   // if (section==0) {
+   //     tView.backgroundColor=[UIColor  colorWithRed:0.419 green: 0.752 blue:0.862 alpha:1];
+
+   // }
+//    else if (section==1)
+//    {tView.backgroundColor=[UIColor  colorWithRed:0.784 green: 0.835 blue:0.117 alpha:1];
+//    }
+//    else if (section==2)
+//    {
+//    tView.backgroundColor=[UIColor  colorWithRed:0.858 green: 0.5387 blue:0.086 alpha:1];
+//    }
+    UILabel *tLabel=[[UILabel alloc]initWithFrame:CGRectMake(10,0,220,40)];
+    
+    // tLabel.backgroundColor=[UIColor blueColor];
+    
+    tLabel.textColor = [UIColor colorWithRed:1 green: 1 blue:1 alpha:1];
+    tLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
+    // tempLabel.font = [UIFont boldSystemFontOfSize:fontSizeForHeaders];
+    
+    tLabel.font = [UIFont boldSystemFontOfSize:14];
+    
+    NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex: section];
+
+    NSString *titulo = [ [contenido objectAtIndex:0]objectAtIndex:2];
+    
+    if ([titulo  isEqual:@"2030"])
+    {
+        tLabel.text =  [NSString stringWithFormat:@"  Proceso Legislativo "];
+        tView.backgroundColor=[UIColor  colorWithRed:0.858 green: 0.5387 blue:0.086 alpha:1];
+    }
+    else if ([titulo  isEqual:@"2020"])  {
+        tLabel.text =  [NSString stringWithFormat:@"  Informes de Gobierno  %@", @""];
+         tView.backgroundColor=[UIColor  colorWithRed:0.784 green: 0.835 blue:0.117 alpha:1];
+    }
+    else   {
+        tLabel.text =  [NSString stringWithFormat:@"  Informes Trimestrales %@", titulo];
+        tView.backgroundColor=[UIColor  colorWithRed:0.419 green: 0.752 blue:0.862 alpha:1];
+    }
+
+   
+    [tView addSubview:tLabel];
+    return tView;
+}
+
+
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40.0f;
+    
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -113,13 +176,21 @@
     UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"Cell"] ;
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     
+    
     cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font=[UIFont boldSystemFontOfSize:11];
     cell.detailTextLabel.font=[UIFont boldSystemFontOfSize:12];
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:0.356 green: 0.380 blue:0.407 alpha:1 ];
+    [cell setBackgroundColor:[UIColor colorWithRed:0.909 green: 0.909 blue:0.905 alpha:1 ]];
+    
 
+    
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex:[indexPath section]];
     NSString *contFila = [ [contenido objectAtIndex:[indexPath row]] objectAtIndex:1];
     cell.textLabel.text =  contFila;
+    
+    cell.imageView.image =[UIImage imageNamed:@"Image-12.jpg"];
 
     return cell;
 }
@@ -128,13 +199,14 @@
 {
     NSArray *contenido =  [[self arrTrimestreSecciones]objectAtIndex: section];
     NSString *titulo = [ [contenido objectAtIndex:0]objectAtIndex:2];
-    
-    if ([titulo  isEqual:@"2020"])
+    if ([titulo  isEqual:@"2030"])
     {
-       return  [NSString stringWithFormat:@"  ASUNTOS JURÍDICOS "];
+       return  [NSString stringWithFormat:@"  Proceso Legislativo "];
     }
+    else if ([titulo  isEqual:@"2020"]) {
+       return  [NSString stringWithFormat:@"  Informes de Gobierno %@", titulo];}
     else {
-       return  [NSString stringWithFormat:@"  Ejercicio del %@", titulo];}
+        return  [NSString stringWithFormat:@"  Informes Trimestrales %@", titulo];}
 };
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

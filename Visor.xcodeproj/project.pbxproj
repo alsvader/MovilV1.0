@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		1DFD5FDDAC01D3A4AE7D4971 /* libPods-Visor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9D67617C8B2E5ECB83B1E8 /* libPods-Visor.a */; };
 		216FCB03915E374E58BC858B /* libPods-VisorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A67326539BF33B4647F7E53 /* libPods-VisorTests.a */; };
+		930FCC751EC39FC100B5103F /* ObjetoDependencias.m in Sources */ = {isa = PBXBuildFile; fileRef = 930FCC741EC39FC100B5103F /* ObjetoDependencias.m */; };
+		930FCC781EC3A00200B5103F /* ObjetoTrimestre.m in Sources */ = {isa = PBXBuildFile; fileRef = 930FCC771EC3A00200B5103F /* ObjetoTrimestre.m */; };
+		933D7FCD1E71CF4400DA675B /* VCILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 933D7FCC1E71CF4400DA675B /* VCILogin.m */; };
 		9344749A1E5CDA8100FCCB2B /* VCGMenuTrimestre.m in Sources */ = {isa = PBXBuildFile; fileRef = 934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */; };
 		9344749D1E5CE83E00FCCB2B /* VCGTemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 9344749C1E5CE83E00FCCB2B /* VCGTemas.m */; };
+		935656481E85B36900070608 /* ObjetoTema.m in Sources */ = {isa = PBXBuildFile; fileRef = 935656471E85B36900070608 /* ObjetoTema.m */; };
+		9356564B1E85B38000070608 /* ObjetoSubtema.m in Sources */ = {isa = PBXBuildFile; fileRef = 9356564A1E85B38000070608 /* ObjetoSubtema.m */; };
 		936FBDD41E4CD1A300B7069B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD31E4CD1A300B7069B /* Foundation.framework */; };
 		936FBDD61E4CD1B400B7069B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936FBDD51E4CD1B400B7069B /* CoreGraphics.framework */; };
+		937501BE1ECE2FEA00B37E8D /* cUtilerias.m in Sources */ = {isa = PBXBuildFile; fileRef = 937501BD1ECE2FEA00B37E8D /* cUtilerias.m */; };
 		93B9CA321E4BA81E00861E32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B9CA311E4BA81E00861E32 /* QuartzCore.framework */; };
 		93DE299C1E5F66E400987569 /* VCGBarras.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DE299B1E5F66E400987569 /* VCGBarras.m */; };
 		DA30B72F1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30B72E1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m */; };
@@ -55,12 +61,24 @@
 /* Begin PBXFileReference section */
 		3A2395F6C180D2B19ED82676 /* Pods-Visor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Visor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Visor/Pods-Visor.debug.xcconfig"; sourceTree = "<group>"; };
 		7A67326539BF33B4647F7E53 /* libPods-VisorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VisorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		930FCC731EC39FC100B5103F /* ObjetoDependencias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoDependencias.h; sourceTree = "<group>"; };
+		930FCC741EC39FC100B5103F /* ObjetoDependencias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoDependencias.m; sourceTree = "<group>"; };
+		930FCC761EC3A00200B5103F /* ObjetoTrimestre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoTrimestre.h; sourceTree = "<group>"; };
+		930FCC771EC3A00200B5103F /* ObjetoTrimestre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoTrimestre.m; sourceTree = "<group>"; };
+		933D7FCB1E71CF4400DA675B /* VCILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCILogin.h; sourceTree = "<group>"; };
+		933D7FCC1E71CF4400DA675B /* VCILogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCILogin.m; sourceTree = "<group>"; };
 		934474981E5CDA8100FCCB2B /* VCGMenuTrimestre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGMenuTrimestre.h; sourceTree = "<group>"; };
 		934474991E5CDA8100FCCB2B /* VCGMenuTrimestre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGMenuTrimestre.m; sourceTree = "<group>"; };
 		9344749B1E5CE83E00FCCB2B /* VCGTemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGTemas.h; sourceTree = "<group>"; };
 		9344749C1E5CE83E00FCCB2B /* VCGTemas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGTemas.m; sourceTree = "<group>"; };
+		935656461E85B36900070608 /* ObjetoTema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoTema.h; sourceTree = "<group>"; };
+		935656471E85B36900070608 /* ObjetoTema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoTema.m; sourceTree = "<group>"; };
+		935656491E85B38000070608 /* ObjetoSubtema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjetoSubtema.h; sourceTree = "<group>"; };
+		9356564A1E85B38000070608 /* ObjetoSubtema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjetoSubtema.m; sourceTree = "<group>"; };
 		936FBDD31E4CD1A300B7069B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		936FBDD51E4CD1B400B7069B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		937501BC1ECE2FEA00B37E8D /* cUtilerias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cUtilerias.h; sourceTree = "<group>"; };
+		937501BD1ECE2FEA00B37E8D /* cUtilerias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cUtilerias.m; sourceTree = "<group>"; };
 		93B9CA311E4BA81E00861E32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		93DE299A1E5F66E400987569 /* VCGBarras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCGBarras.h; sourceTree = "<group>"; };
 		93DE299B1E5F66E400987569 /* VCGBarras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCGBarras.m; sourceTree = "<group>"; };
@@ -140,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		937501BB1ECE2F7600B37E8D /* Utilerias */ = {
+			isa = PBXGroup;
+			children = (
+				937501BC1ECE2FEA00B37E8D /* cUtilerias.h */,
+				937501BD1ECE2FEA00B37E8D /* cUtilerias.m */,
+			);
+			name = Utilerias;
+			sourceTree = "<group>";
+		};
 		A3359A87507C5FFF95A73C91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +195,14 @@
 			children = (
 				DA30B72D1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.h */,
 				DA30B72E1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m */,
+				935656461E85B36900070608 /* ObjetoTema.h */,
+				935656471E85B36900070608 /* ObjetoTema.m */,
+				935656491E85B38000070608 /* ObjetoSubtema.h */,
+				9356564A1E85B38000070608 /* ObjetoSubtema.m */,
+				930FCC731EC39FC100B5103F /* ObjetoDependencias.h */,
+				930FCC741EC39FC100B5103F /* ObjetoDependencias.m */,
+				930FCC761EC3A00200B5103F /* ObjetoTrimestre.h */,
+				930FCC771EC3A00200B5103F /* ObjetoTrimestre.m */,
 			);
 			name = Actualizacion;
 			sourceTree = "<group>";
@@ -233,6 +268,7 @@
 		DA7778951DDB84E500281706 /* Visor */ = {
 			isa = PBXGroup;
 			children = (
+				937501BB1ECE2F7600B37E8D /* Utilerias */,
 				DA34EB041E40F96300C78426 /* Graficas */,
 				DA675EF81E2EE663005C37BE /* UnidadesInfo */,
 				DA30B72C1DFC797D00A8BBF2 /* Actualizacion */,
@@ -256,6 +292,8 @@
 				DAE12E261DEFB70700B32300 /* VCISubtemas.m */,
 				DAD9D7121E2568D700C8541D /* VCIMenuTrimestre.h */,
 				DAD9D7131E2568D700C8541D /* VCIMenuTrimestre.m */,
+				933D7FCB1E71CF4400DA675B /* VCILogin.h */,
+				933D7FCC1E71CF4400DA675B /* VCILogin.m */,
 			);
 			path = Visor;
 			sourceTree = "<group>";
@@ -486,24 +524,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935656481E85B36900070608 /* ObjetoTema.m in Sources */,
 				9344749A1E5CDA8100FCCB2B /* VCGMenuTrimestre.m in Sources */,
 				DA77789C1DDB84E500281706 /* AppDelegate.m in Sources */,
 				93DE299C1E5F66E400987569 /* VCGBarras.m in Sources */,
 				DA5B846E1E37BF6600D56DC9 /* VCIAgrupamientos.m in Sources */,
 				DAC778DB1DEE398F0077EB45 /* VCMenu.m in Sources */,
 				DA7778C51DDB8E1E00281706 /* BDManager.m in Sources */,
+				933D7FCD1E71CF4400DA675B /* VCILogin.m in Sources */,
 				DAC778D81DEE351D0077EB45 /* VCITrimestre.m in Sources */,
 				DABF56671E463699001B9E77 /* VCIProcesoLeg.m in Sources */,
+				930FCC751EC39FC100B5103F /* ObjetoDependencias.m in Sources */,
 				DA77789F1DDB84E500281706 /* Visor.xcdatamodeld in Sources */,
 				DA30B72F1DFC7A0100A8BBF2 /* ObjetoTabUniContenido.m in Sources */,
 				DA7778A21DDB84E500281706 /* VCITemas.m in Sources */,
+				937501BE1ECE2FEA00B37E8D /* cUtilerias.m in Sources */,
 				DAD9D7141E2568D700C8541D /* VCIMenuTrimestre.m in Sources */,
+				9356564B1E85B38000070608 /* ObjetoSubtema.m in Sources */,
 				DA5B84711E37C83300D56DC9 /* VCIReuniones.m in Sources */,
 				DAE12E271DEFB70700B32300 /* VCISubtemas.m in Sources */,
 				DA6CCFEE1E3917620035384F /* VCIIngresos.m in Sources */,
 				DA7778991DDB84E500281706 /* main.m in Sources */,
 				9344749D1E5CE83E00FCCB2B /* VCGTemas.m in Sources */,
 				DA675EFB1E2EE74B005C37BE /* VCIObras.m in Sources */,
+				930FCC781EC3A00200B5103F /* ObjetoTrimestre.m in Sources */,
 				DA34EB071E40FA1900C78426 /* VCGPastel.m in Sources */,
 				DA6CCFF11E39295A0035384F /* VCIProgramasyAcciones.m in Sources */,
 				DA9331CD1E36A32300DD7421 /* VCIProyectos.m in Sources */,

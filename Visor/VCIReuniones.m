@@ -27,6 +27,13 @@
     //self.lbFechaFin.text=@"";
     self.lbMotivo.text=@"";
     
+    [self.lbLugar setHidden:true];
+    [self.lbFechaInicio setHidden:true];
+    [self.lbMotivo setHidden:true];
+    [self.etLugar setHidden:true];
+    [self.etFechaInicio setHidden:true];
+    [self.etMotivo setHidden:true];
+    
     self.dbManager = [[BDManager alloc] initWithDatabaseFileName:@"bd_visor.sqlite"];
     [self obtenerDatos];
     
@@ -58,22 +65,39 @@
         
         self.lbEje.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:0];
         self.lbDependencia.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:1];
-        self.lbTrimestre.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:2];
+       // self.lbTrimestre.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:2];
+        self.lbTrimestre.text=[ _pSubTemaSel objectAtIndex:4 ];
         self.lbTema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:3];
         self.lbSubtema.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:4];
         
-        self.lbLugar.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
+    
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:5] length]>0)
+        {
+            self.lbLugar.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
+            [self.lbLugar setHidden:false];[self.etLugar setHidden:false];
+        }
+        
+       // self.lbLugar.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:5];
         NSInteger lon = [[[self.arrDatos objectAtIndex:0]objectAtIndex:7] length];
         if (lon >0)
           {
               NSString *fecha = [NSString stringWithFormat: @"%@ %@ %@ %@",@"Del ", [[self.arrDatos objectAtIndex:0]objectAtIndex:6], @" al ", [[self.arrDatos objectAtIndex:0]objectAtIndex:7]];
               self.lbFechaInicio.text=fecha;
+              [self.lbFechaInicio setHidden:false];[self.etFechaInicio setHidden:false];
           }
         else
          {
             self.lbFechaInicio.text= [[self.arrDatos objectAtIndex:0]objectAtIndex:6];
+              [self.lbFechaInicio setHidden:false];[self.etFechaInicio setHidden:false];
          }
-        self.lbMotivo.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+ 
+        if ([[[self.arrDatos objectAtIndex:0]objectAtIndex:8] length]>0)
+        {
+            self.lbMotivo.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
+            [self.lbMotivo setHidden:false];[self.etMotivo setHidden:false];
+        }
+        
+     //   self.lbMotivo.text=[[self.arrDatos objectAtIndex:0]objectAtIndex:8];
        
        
     }
