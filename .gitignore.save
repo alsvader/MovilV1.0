@@ -57,6 +57,7 @@ build/
 #     - unless they are "shared")
 #
 # NB: this is exclusive with OPTION 2 below
+http://codigoambar.io/taller-de-elixir-clase-1.-conociendo-la-m%C3%A1quina-virtual/http://codigoambar.io/taller-de-elixir-clase-1.-conociendo-la-m%C3%A1quina-virtual/http://codigoambar.io/taller-de-elixir-clase-1.-conociendo-la-m%C3%A1quina-virtual/
 xcuserdata
 
 # OPTION 2: ---------------------------------
@@ -112,6 +113,5 @@ xcuserdata
 # pod install
 # in the App.xcodeproj directory.
 # This ensures the latest dependencies are used.
-#Pods/
-
+Pods/
 
