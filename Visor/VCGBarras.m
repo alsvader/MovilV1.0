@@ -141,7 +141,7 @@
 }
 
 - (NSString *)nameForTheBarWithBarNumber:(NSInteger)barNumber{
-    return [NSString stringWithFormat:@"Data %d",(int)barNumber];
+    return [NSString stringWithFormat:@"%d",(int)barNumber];
 }
 
 - (NSMutableArray *)yDataForBarWithBarNumber:(NSInteger)barNumber{
@@ -166,7 +166,7 @@
     UILabel *label = [[UILabel alloc] init];
     [label setFont:[UIFont systemFontOfSize:9]];
     [label setTextAlignment:NSTextAlignmentCenter];
-    [label setText:[NSString stringWithFormat:@"Bar Data: %.2f", value.floatValue]];
+    [label setText:[NSString stringWithFormat:@"%.2f", value.floatValue]];
     [label setFrame:CGRectMake(-20, 0, 150, 30)];
     [view addSubview:label];
     
